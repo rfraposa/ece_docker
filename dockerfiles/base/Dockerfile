@@ -5,7 +5,6 @@ FROM ubuntu:14.04
 RUN sudo apt-get update \
 sudo apt-get install -y linux-image-extra-$(uname -r) linux-image-extra-virtual xfsprogs \
 sudo apt-get upgrade -y \
-sudo yum -y update kernel xfsprogs \ 
 echo "vm.max_map_count=262144" | sudo tee -a /etc/sysctl.conf 
 
 RUN sudo systemctl enable docker \
