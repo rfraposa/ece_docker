@@ -1,1 +1,1 @@
-sudo docker run -dns 127.0.0.1 -p 50070:50070 -p 8020:8020 -e NODE_TYPE=namenode -name namenode -h namenode -i -t hwx/hdp_node
+sudo docker run -v /var/run/docker.sock:/var/run/docker.sock -dns 127.0.0.1 -p 22 -name host1 -h host1 -d --privileged=true  -i -t rich/ece_node
