@@ -8,7 +8,9 @@ RUN apt-get update  && apt-get install -y \
     curl \
     lxc \
     iptables \
-    software-properties-common
+    software-properties-common \
+    openssh-server \
+    openssh-clients
     
 RUN  apt-get install -y linux-image-extra-$(uname -r) linux-image-extra-virtual xfsprogs \
  apt-get upgrade -y \
