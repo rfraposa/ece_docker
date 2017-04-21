@@ -9,7 +9,9 @@ RUN apt-get update  && apt-get install -y \
     lxc \
     iptables  
     
-RUN  apt-get install -y linux-image-extra-$(uname -r) linux-image-extra-virtual xfsprogs &&  apt-get upgrade -y && echo "vm.max_map_count=262144" |  tee -a /etc/sysctl.conf 
+#RUN  apt-get install -y linux-image-extra-$(uname -r) linux-image-extra-virtual xfsprogs &&  apt-get upgrade -y && 
+
+RUN echo "vm.max_map_count=262144" |  tee -a /etc/sysctl.conf 
 
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 
