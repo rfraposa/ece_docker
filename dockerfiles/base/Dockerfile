@@ -21,7 +21,8 @@ RUN  add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 RUN  apt-get update
 RUN apt-get install -y docker-ce
 
-RUN useradd -m -p password -s /bin/bash ubuntu & usermod -aG sudo ubuntu
+RUN useradd -m -p password -s /bin/bash ubuntu
+RUN usermod -aG sudo ubuntu
 
 
 EXPOSE 22 80 443 7000 12375 12300 12343 12400 12443 8764 9200 9300 22191 12191 2112 18000 
