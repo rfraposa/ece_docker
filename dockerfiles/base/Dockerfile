@@ -7,7 +7,8 @@ RUN apt-get update -qq && apt-get install -qqy \
     ca-certificates \
     curl \
     lxc \
-    iptables
+    iptables \
+    software-properties-common
     
 RUN sudo apt-get install -y linux-image-extra-$(uname -r) linux-image-extra-virtual xfsprogs \
 sudo apt-get upgrade -y \
